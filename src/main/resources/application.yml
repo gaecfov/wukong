@@ -1,0 +1,13 @@
+spring:
+    application:
+        name: wukong
+    datasource:
+        url: ${PC_JDBC_URL:jdbc:h2:file:${DB_H2_FILE:./wukong}}
+        driver-class-name: ${PC_JDBC_DRIVER_CLASS_NAME:org.h2.Driver}
+        username: ${PC_JDBC_USERNAME:wukong}
+        password: ${PC_JDBC_PASSWORD:wukong}
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        open-in-view: false
